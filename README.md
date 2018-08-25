@@ -1,7 +1,7 @@
-# My Blog
-Check here :point_right: [In the Woods](https://zhulin.me)  
+# My Site
+Check here :point_right: [Woods](https://zhulin.me)  
 Created with [Hexo](https://hexo.io/)  
-Deployed on [Netlify](https://www.netlify.com/)  
+
 
 > Install Node.js and npm first.
 
