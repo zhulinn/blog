@@ -92,8 +92,8 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  home: ../ || home
   Blog: / || pencil
+  Welcome: ../ || home
   #about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th
@@ -134,11 +134,11 @@ social:
   Zhihu: //www.zhihu.com/people/zhulinn
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
-  #FB Page: https://www.facebook.com/yourname || facebook
+  FB Page: https://www.facebook.com/zhulinn || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
   #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
+  Instagram: https://instagram.com/zhul_ || instagram
   #Skype: skype:yourname?call|chat || skype
 
 social_icons:

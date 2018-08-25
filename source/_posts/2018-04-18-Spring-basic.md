@@ -212,7 +212,7 @@ public class  Config {
 
 # 切面
 
-![](../../uploads/post_pics/spring/AOP.png)
+![](//zhulin.me/blog/uploads/post_pics/spring/AOP.png)
 ## 术语
 
 **通知Advice**

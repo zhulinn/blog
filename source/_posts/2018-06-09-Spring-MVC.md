@@ -9,7 +9,7 @@ tags: Spring
 
 # Spring MVC基础知识
 <hr>
-![](../../uploads/post_pics/spring-mvc/flow.png)
+![](//zhulin.me/blog/uploads/post_pics/spring-mvc/flow.png)
 
 <!-- more -->
 
