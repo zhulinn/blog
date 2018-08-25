@@ -82,8 +82,8 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:zhulinn/zhulinn.github.io.git
-  branch: hexo
+  repo: git@github.com:zhulinn/blog.git
+  branch: master
 
 
 # sitemap
