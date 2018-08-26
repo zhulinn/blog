@@ -11,7 +11,7 @@ tags: Spring
 Spring JDBC框架提供与平台无关的统一持久化异常。
 采用模板方法模式，将数据访问过程划分为模板和回调。模板管理过程中固定的部
 分，而回调处理自定义的数据访问代码。针对不同持久化平台，Spring提供多个可选模板。
-![](//zhulin.me/blog/uploads/post_pics/spring/template.png)
+![](/blog/uploads/post_pics/spring/template.png)
 
 <!-- more -->
 

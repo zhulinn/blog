@@ -7,7 +7,7 @@ tags: Spring
 ---
 
 ## Spring Security原理
-![](//zhulin.me/blog/uploads/post_pics/spring/delegatingfilterproxy.png)
+![](/blog/uploads/post_pics/spring/delegatingfilterproxy.png)
 DelegatingFilterProxy是一个特殊的Servlet Filter，将工作委托给javax.servlet.Filter实现类。
 
 <!-- more -->

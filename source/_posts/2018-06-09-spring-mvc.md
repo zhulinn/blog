@@ -9,7 +9,8 @@ tags: Spring
 
 # Spring MVC基础知识
 <hr>
-![](//zhulin.me/blog/uploads/post_pics/spring-mvc/flow.png)
+
+![](/blog/uploads/post_pics/spring-mvc/flow.png)
 
 <!-- more -->
 
@@ -305,10 +306,11 @@ public String processRegistration(Spitter spitter, RedirectAttributes model) {
 
 # Spring Boot
 <hr>
-![Spring-Boot](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/Spring-boot.png)
+
+![Spring-Boot](/blog/uploads/post_pics/Spring-boot.png)
 
 The @SpringBootApplication annotation is equivalent to using @Configuration, @EnableAutoConfiguration and @ComponentScan with their default attributes.
-![springbootapplication](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/springbootapplication.png)
+![springbootapplication](/blog/uploads/post_pics/springbootapplication.png)
 
  The relationship between the Controller and the View
-![spring-url](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/spring-url.png)
+![spring-url](/blog/uploads/post_pics/spring-url.png)

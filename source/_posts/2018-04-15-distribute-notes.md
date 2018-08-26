@@ -14,11 +14,11 @@ date: 2018-04-15 23:57:27
 ## 算法
 1. 轮询
 轮询算法把每个请求轮流发送到每个服务器上。该算法比较适合每个服务器的性能差不多的场景。
-![](https://raw.githubusercontent.com/CyC2018/Interview-Notebook/master/pics/2766d04f-7dad-42e4-99d1-60682c9d5c61.jpg)
+![](https://raw.githubusercontent.com/zhulinn/Interview-Notebook/master/pics/2766d04f-7dad-42e4-99d1-60682c9d5c61.jpg)
 <!-- more -->
 2. 加权轮询
 加权轮询是在轮询的基础上，根据服务器的性能差异，为服务器赋予一定的权值。
-![](https://raw.githubusercontent.com/CyC2018/Interview-Notebook/master/pics/211c60d4-75ca-4acd-8a4f-171458ed58b4.jpg)
+![](https://raw.githubusercontent.com/zhulinn/Interview-Notebook/master/pics/211c60d4-75ca-4acd-8a4f-171458ed58b4.jpg)
 3. 最少连接
 最少连接算法就是将请求发送给当前最少连接数的服务器上。
 4. 加权最小连接
@@ -56,21 +56,21 @@ Java 提供了两种内置的锁的实现，一种是由 JVM 实现的 synchroni
 1. Sticky Sessions
 需要配置负载均衡器，使得一个用户的所有请求都路由到一个服务器节点上，这样就可以把用户的 Session 存放在该服务器节点中。
 缺点：当服务器节点宕机时，将丢失该服务器节点上的所有 Session。
-![](https://github.com/CyC2018/Interview-Notebook/raw/master/pics/MultiNode-StickySessions.jpg)
+![](https://github.com/zhulinn/Interview-Notebook/raw/master/pics/MultiNode-StickySessions.jpg)
 
 
 2. Session Replication
 在服务器节点之间进行 Session 同步操作，这样的话用户可以访问任何一个服务器节点。
 缺点：需要更好的服务器硬件条件；需要对服务器进行配置。
-![](https://github.com/CyC2018/Interview-Notebook/raw/master/pics/MultiNode-SessionReplication.jpg)
+![](https://github.com/zhulinn/Interview-Notebook/raw/master/pics/MultiNode-SessionReplication.jpg)
 
 3. Persistent DataStore
 将 Session 信息持久化到一个数据库中。
 缺点：有可能需要去实现存取 Session 的代码。
-![](https://github.com/CyC2018/Interview-Notebook/raw/master/pics/MultiNode-SpringSession.jpg)
+![](https://github.com/zhulinn/Interview-Notebook/raw/master/pics/MultiNode-SpringSession.jpg)
 
 4. In-Memory DataStore
 可以使用 Redis 和 Memcached 这种内存型数据库对 Session 进行存储，可以大大提高 Session 的读写效率。内存型数据库同样可以持久化数据到磁盘中来保证数据的安全性。
 # CDN架构
-![CDN](https://raw.githubusercontent.com/CyC2018/Interview-Notebook/master/pics/dbd60b1f-b700-4da6-a993-62578e892333.jpg)
+![CDN](https://raw.githubusercontent.com/zhulinn/Interview-Notebook/master/pics/dbd60b1f-b700-4da6-a993-62578e892333.jpg)
 

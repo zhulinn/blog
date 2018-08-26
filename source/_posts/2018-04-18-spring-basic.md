@@ -13,7 +13,7 @@ toc: true
 Spring offers a container, often referrd to as the *Spring application context*, that creates and manages application components. These components, or *beans*, are wired together inside of the Spring application context to make a complete application.
 The act of wiring beans together is based on a pattern known as **dependency injection**. 
 
-![IoC](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/IoC.png)
+![IoC](/blog/uploads/post_pics/IoC.png)
 
 <!-- more -->
 
@@ -22,8 +22,8 @@ IoC container creates HelloWorldService object and then pass the object HelloWor
 So, what is **IoC**?
 >In case that an object is created from a class traditionally, its fields have value assigned inside the class. Reversely, for Spring, <font color=red>its objects and fields have value injected from the outside by an object called as IoC. </font>
 
-![IoC-Container1](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/IoC-Container1.png)
-![IoC-Container2](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/IoC-Container2.png)
+![IoC-Container1](/blog/uploads/post_pics/IoC-Container1.png)
+![IoC-Container2](/blog/uploads/post_pics/IoC-Container2.png)
 IoC Container is a container containing all Spring BEANs used in the application.
 
 

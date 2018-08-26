@@ -9,7 +9,7 @@ date: 2018-03-05 00:37:48
 
 
 
-<!-- https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/XXX.png -->
+<!-- /blog/uploads/post_pics/XXX.png -->
 
 # 面向对象
 面向对象的本质就是将现实世界描绘成一系列完全自治、封闭的对象。
@@ -171,7 +171,7 @@ while(! bufferFull(bytesRead) ) {
 
 # JVM内存模型
 Java运行时(Java runtime)内存模型。五大区：方法区、堆区、虚拟机栈、本地方法栈、程序计数器。
-![](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/JMM.png)
+![](/blog/uploads/post_pics/JMM.png)
 程序计数器：线程私有，保存当前线程执行的虚拟机字节码指令的内存地址。多线程切换后，恢复原先状态，找到原先执行的指令。
 虚拟机栈：线程私有，包含多个栈帧，存储方法数据和部分过程结果的数据结构。方法的调用到返回结果，对应一个栈帧的入栈到出栈。
 本地方法栈：同虚拟机栈，适用于Native方法。
@@ -185,7 +185,7 @@ Java运行时(Java runtime)内存模型。五大区：方法区、堆区、虚�
 
 # 类加载器
 系统会通过**加载**、**连接**（验证-准备(初始值)-解析(符号引用=>内存地址的直接引用)）、**初始化**三个过程来对该类进行初始化。使用一个类之前，JVM需要先将该类的字节码文件（.class文件）从磁盘、网络或其他来源加载到内存中，并对字节码进行解析生成对应的Class对象。
-![](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/classloader.png))
+![](/blog/uploads/post_pics/classloader.png))
 双亲委托机制：优先最上层parent加载器加载。解决类加载的统一性问题，保证了基类都由相同的类加载器加载。
 
 # StringBuffer vs StringBuilder
@@ -226,7 +226,7 @@ ReentrantLock: 实现Lock接口。
 连接协议，本地IP，本地端口，远地IP,远地端口。为了区分不同应用程序访问同一TCP端口，使用Socket接口，实现数据传输并发服务。分为三个步骤：服务器监听，客户端请求，连接确认。
 
 # OSI七层模型
-![ISO](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/ISO.jpg)
+![ISO](/blog/uploads/post_pics/ISO.jpg)
 
 # Semaphore
 内部维护一组虚拟许可，数量由构造函数的参数指定。访问前，使用acquire获得许可，若许可数量为0，阻塞；访问后使用release释放许可。公平性通过检查阻塞队列实现
@@ -238,7 +238,7 @@ ReentrantLock: 实现Lock接口。
 一个读锁（共享锁），一个写锁（独占锁）。允许多个读线程访问。适用于读多写少
 
 # Executor
-![Executor](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/Executor.png)
+![Executor](/blog/uploads/post_pics/Executor.png)
 Executor接口是Executor框架最基础的部分，定义用于执行Runnable的execute方法。
 ExecutorService接口继承Executor接口，execute()执行Runnable任务，submit()执行Callable或Runnable任务，并返回Future结果。
 Future接口：判断任务是否完成；中断任务；获取执行结果。
@@ -274,4 +274,4 @@ Future接口：判断任务是否完成；中断任务；获取执行结果。
 * Parallel Old老年代并行回收收集器：关注吞吐量
 * CMS收集器：并发式Concurrent Mark Sweep，标记-清除算法。关注于系统停顿时间
 * G1收集器：服务器的，标记-压缩算法
-![gc](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/GC.PNG)
+![gc](/blog/uploads/post_pics/GC.PNG)
