@@ -12,10 +12,10 @@ sticky: 100
 **Demo:** [E-Shop](https://e-shop-.herokuapp.com)
 **Github:** [Online Shop Store](https://github.com/zhulinn/Online-Shopping-Store)
 <hr>
-<img src="https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/shop-cart.png">
+<img src="/blog/uploads/post_pics/shop-cart.png">
 <!-- more -->
-<img src="https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/shop-product.png">
-<img src="https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/shop-order.png">
+<img src="/blog/uploads/post_pics/shop-product.png">
+<img src="/blog/uploads/post_pics/shop-order.png">
 # Before 
 Rencently, I am developing a online shopping web application with Spring Boot as a practice of Spring. This project is totally developed by myself. Technology stacks includes Spring Boot, Spring Security, Spring Data JPA & Hibernate for the back end and Freemarker, Bootstrap & JavaScript for the front end. It's a full stack project.
 

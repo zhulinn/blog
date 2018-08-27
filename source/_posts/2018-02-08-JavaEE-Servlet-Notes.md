@@ -28,11 +28,11 @@ Set JSP files in the **WEB-INF** folder or its subdirectories.
 
 ------
 # Web Application Directory Structure
-![Dierectory Structure](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/WAR-directory-structure.png)
+![Dierectory Structure](/blog/uploads/post_pics/WAR-directory-structure.png)
 
 ---
 # URL
-![URL](https://raw.githubusercontent.com/zhulinn/zhulinn.github.io/hexo/source/uploads/post_pics/url-pattern.png)
+![URL](/blog/uploads/post_pics/url-pattern.png)
 
 ---
 # Session
