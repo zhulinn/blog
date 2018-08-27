@@ -411,7 +411,7 @@ gitment:
   cleanly: true # Hide 'Powered by ...' on footer, and more
   language: # Force language, or auto switch by theme
   github_user: zhulinn
-  github_repo: zhulinn.github.io
+  github_repo: blog
   client_id: 79df903d3131dc2c3f5a
   client_secret: 93457bf42554d5cdfea12ad9d14e6bcac9709f1f
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
