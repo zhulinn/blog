@@ -3,6 +3,8 @@ title: Amazon EC2 + Shadowsocks免费搭建VPN服务器，实现个人科学上�
 toc: true
 categories: 日常
 tags: 翻墙
+top: true
+sticky: 100
 date: 2018-05-18 22:58:12
 ---
 
