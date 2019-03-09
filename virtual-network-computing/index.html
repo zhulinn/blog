@@ -74,7 +74,7 @@
 
 
 
-  <meta name="keywords" content="JSP," />
+  <meta name="keywords" content="GUI,X11," />
 
 
 
@@ -85,18 +85,20 @@
 
 
 
-<meta name="description" content="Life cycle of JSP Page Translatione.g. home.jsp -&amp;gt; home_jsp.java Compilation">
-<meta name="keywords" content="JSP">
+<meta name="description" content="When running GUI application using X11 forwarding over ssh, VNC allows you running the application in background and reconnect later. VNC consists of two types of component.  A server, which generate">
+<meta name="keywords" content="GUI,X11">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaEE JSP Notes">
-<meta property="og:url" content="https://zlin.me/blog/javaee-jsp-notes/index.html">
+<meta property="og:title" content="Virtual Network Computing (VNC)">
+<meta property="og:url" content="https://zlin.me/blog/virtual-network-computing/index.html">
 <meta property="og:site_name" content="Woods">
-<meta property="og:description" content="Life cycle of JSP Page Translatione.g. home.jsp -&amp;gt; home_jsp.java Compilation">
+<meta property="og:description" content="When running GUI application using X11 forwarding over ssh, VNC allows you running the application in background and reconnect later. VNC consists of two types of component.  A server, which generate">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-09-14T06:19:37.084Z">
+<meta property="og:image" content="https://zlin.me/blog/uploads/post_pics/VNC/Xvnc.gif">
+<meta property="og:updated_time" content="2019-03-09T07:47:31.233Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaEE JSP Notes">
-<meta name="twitter:description" content="Life cycle of JSP Page Translatione.g. home.jsp -&amp;gt; home_jsp.java Compilation">
+<meta name="twitter:title" content="Virtual Network Computing (VNC)">
+<meta name="twitter:description" content="When running GUI application using X11 forwarding over ssh, VNC allows you running the application in background and reconnect later. VNC consists of two types of component.  A server, which generate">
+<meta name="twitter:image" content="https://zlin.me/blog/uploads/post_pics/VNC/Xvnc.gif">
 
 
 
@@ -126,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="https://zlin.me/blog/javaee-jsp-notes/"/>
+  <link rel="canonical" href="https://zlin.me/blog/virtual-network-computing/"/>
 
 
 
 
 
-  <title>JavaEE JSP Notes | Woods</title>
+  <title>Virtual Network Computing (VNC) | Woods</title>
   
 
 
@@ -317,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://zlin.me/blog/blog/javaee-jsp-notes/">
+    <link itemprop="mainEntityOfPage" href="https://zlin.me/blog/blog/virtual-network-computing/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Woods">
@@ -334,7 +336,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">JavaEE JSP Notes</h2>
+          <h2 class="post-title" itemprop="name headline">Virtual Network Computing (VNC)</h2>
         
 
         <div class="post-meta">
@@ -346,8 +348,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-09T19:26:24-05:00">
-                2018-02-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-09T02:28:39-05:00">
+                2019-03-09
               </time>
             
 
@@ -369,8 +371,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/blog/categories/javaee/" itemprop="url" rel="index">
-                    <span itemprop="name">JavaEE</span>
+                  <a href="/blog/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -387,8 +389,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/blog/javaee-jsp-notes/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count gitment-comments-count" data-xid="/blog/javaee-jsp-notes/" itemprop="commentsCount"></span>
+                <a href="/blog/virtual-network-computing/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count gitment-comments-count" data-xid="/blog/virtual-network-computing/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -416,108 +418,22 @@
       
 
       
-        <h1 id="Life-cycle-of-JSP-Page"><a href="#Life-cycle-of-JSP-Page" class="headerlink" title="Life cycle of JSP Page"></a>Life cycle of JSP Page</h1><ol>
-<li>Translation<br>e.g. home.jsp -&gt; home_jsp.java</li>
-<li>Compilation</li>
-</ol>
-<a id="more"></a>
-<p>e.g. home_jsp.java -&gt; home_jsp.class</p>
-<ol start="3">
-<li>Class Loading</li>
-<li>Instance Creation</li>
-<li>Initialization</li>
-<li>Request Processing</li>
-<li>Destroy</li>
-</ol>
-<h1 id="JSP-Implicit-Object"><a href="#JSP-Implicit-Object" class="headerlink" title="JSP Implicit Object"></a>JSP Implicit Object</h1><ul>
-<li>out Object<br>Output content to be sent in client response. <code>out.print()</code> is same as &lt;%= %&gt;</li>
-<li>request Object</li>
-<li>response Object</li>
-<li>config Object<br>Get the JSP init params.</li>
-<li>application Object<br>Get the context information and attributes in JSP. <code>getRequestDispatcher(&quot;XXX&quot;)</code></li>
-<li>session Object<br>Whenever we request a JSP page, container automatically creates a session for the JSP. <code>&lt;%@ page session=&quot;false&quot;%&gt;</code></li>
-<li>pageContext Object<br>We can use pageContext to get and set attributes with different scopes and to forward request to other resources. pageContext object also hold reference to other implicit object.</li>
-<li>page Object<br>Represents the current JSP page. Provide reference to the generated servlet class.</li>
-<li>exception Object<br>Error pages.</li>
-</ul>
-<h1 id="JSP-Directives"><a href="#JSP-Directives" class="headerlink" title="JSP Directives"></a>JSP Directives</h1><ul>
-<li><strong>page directive</strong><br>e.g. <code>&lt;%@ page import=&quot;java.util.Date,java.util.List,java.io.*&quot; %&gt;</code></li>
-<li><strong>include directive</strong><br>e.g. <code>&lt;%@ include file=&quot;test.html&quot; %&gt;</code></li>
-<li><strong>taglib directive</strong><br>e.g. <code>&lt;%@ taglib uri=&quot;/WEB-INF/c.tld&quot; prefix=&quot;c&quot;%&gt;</code></li>
-</ul>
-<h1 id="Exception-Handling-in-JSP"><a href="#Exception-Handling-in-JSP" class="headerlink" title="Exception Handling in JSP"></a>Exception Handling in JSP</h1><h2 id="Define-an-Error-Page"><a href="#Define-an-Error-Page" class="headerlink" title="Define an Error Page"></a>Define an Error Page</h2><p>To handle exceptions thrown by the JSP page, all we need is an error page and set page directive attribute <code>isErrorPage</code> value to <code>true</code>.</p>
-<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>Two ways</p>
-<ul>
-<li>Set page directive <code>errorPage</code> attribute. <code>&lt;%@ page errorPage=&quot;error.jsp&quot;%&gt;</code></li>
-<li>Define error page in web.xml with <code>error-page</code><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">error-page</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">error-code</span>&gt;</span>404<span class="tag">&lt;/<span class="name">error-code</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">location</span>&gt;</span>/error.jsp<span class="tag">&lt;/<span class="name">location</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">error-page</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <p><img src="/blog/uploads/post_pics/VNC/Xvnc.gif" alt=""></p>
+<p>When running GUI application using X11 forwarding over ssh, VNC allows you running the application in background and reconnect later. VNC consists of two types of component.  A server, which generates a display, and a viewer, which actually draws the display on your screen.</p>
+<ol>
+<li><p>Start a new VNC server at server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vncserver</span><br></pre></td></tr></table></figure>
 </li>
-</ul>
-<h1 id="Expression-Language-EL"><a href="#Expression-Language-EL" class="headerlink" title="Expression Language(EL)"></a>Expression Language(EL)</h1><p>We can disable EL expression in JSP by setting <code>isELIgnored</code> to <code>true</code>.</p>
-<h2 id="EL-Implicati-Objects"><a href="#EL-Implicati-Objects" class="headerlink" title="EL Implicati Objects"></a>EL Implicati Objects</h2><p>e.g. <code>pageScope</code>, <code>requestScope</code>, <code>sessionScope</code>, <code>applicationScope</code>, <code>param</code>, <code>paramValues</code>, <code>header</code>, <code>headerValues</code>, <code>cookie</code>, <code>initParam</code>  – Map type<br><code>pageContext</code> – pageContext type</p>
-<blockquote>
-<p>If scope is not provided, the JSP EL looks into page, request, session and application scope to find the named attribute.</p>
-</blockquote>
-<h2 id="EL-Operators"><a href="#EL-Operators" class="headerlink" title="EL Operators"></a>EL Operators</h2><ol>
-<li>Dot or Access Operator <code>.</code><br><code>${firstObj.secondObj}</code></li>
-<li>Collection Operator <code>[]</code><br><code>${requestScope[“foo.bar”]}</code><br><code>${myList[1]}</code> and <code>${myList[“1”]}</code><br><code>${myMap[expr]}</code></li>
-<li>Arithmetic Operator<br><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
-<li>Logical Operators<br><code>&amp;&amp;</code>, <code>||</code>, <code>!</code></li>
-<li>Relational Operators<br><code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></li>
-</ol>
-<h1 id="Action-Tags"><a href="#Action-Tags" class="headerlink" title="Action Tags"></a>Action Tags</h1><h2 id="jsp-useBean"><a href="#jsp-useBean" class="headerlink" title="jsp:useBean"></a>jsp:useBean</h2><p><strong>Use or create one if it’s null</strong><br><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=<span class="string">"myBeanAttribute"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.journaldev.MyBean"</span> scope=<span class="string">"request"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
-<p>JSP container will first try to find the myBeanAttribute attribute in the request scope but if it’s not existing then it will create the instance of MyBean and then assign it to the myBeanAttribute id variable in JSP and sets it as an attribute to the request scope.</p>
-<hr>
-
-<p><strong>getProperty is limitted</strong><br>We can get it’s properties using jsp:getProperty action like below.<br><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:getProperty name=<span class="string">"myBeanAttribute"</span> property=<span class="string">"count"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
-<p><code>getProperty</code> is limited because we <strong>can’t get the property of a property</strong>. For example if MyBean has a property that is another java bean, then we can’t use JSP action tags to get it’s value, for that we have JSP EL.</p>
-<hr>
-
-<p><strong>Set only on new one</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=<span class="string">"myBeanAttribute"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.journaldev.MyBean"</span> scope=<span class="string">"request"</span>&gt;</span><br><span class="line">    &lt;jsp:setProperty name=<span class="string">"myBeanAttribute"</span> property=<span class="string">"count"</span> value=<span class="string">"5"</span> /&gt;</span><br><span class="line">&lt;/jsp:useBean&gt;</span><br></pre></td></tr></table></figure></p>
-<p><code>jsp:setProperty</code> inside the <code>jsp:useBeanSet</code> only if <code>jsp:useBean</code> is creating a new instance.</p>
-<hr>
-
-<p><strong>type and class</strong><br><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=<span class="string">"person"</span> type=<span class="string">"Person"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"Employee"</span> scope=<span class="string">"request"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
-<p>If we don’t provide <code>class</code> attribute value, it must has an attribute called <code>person</code>.<br>If we don’t provide <code>scope</code> attribute value, it’s defaulted to page scope.</p>
-<hr>
-
-<p><strong><code>param</code> Set Been properties from request parameters</strong><br>If we want to set the Java Bean properties from request parameters, we can use param attribute like below.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=<span class="string">"myBeanAttribute"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.journaldev.MyBean"</span> scope=<span class="string">"session"</span>&gt;</span><br><span class="line">&lt;jsp:setProperty name=<span class="string">"myBeanAttribute"</span> property=<span class="string">"id"</span> param=<span class="string">"empID"</span> /&gt;</span><br><span class="line">&lt;/jsp:useBean&gt;</span><br></pre></td></tr></table></figure></p>
-<p>If property and param attribute values are same, we can skip the param attribute.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=<span class="string">"myBeanAttribute"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.journaldev.MyBean"</span> scope=<span class="string">"session"</span>&gt;</span><br><span class="line">&lt;jsp:setProperty name=<span class="string">"myBeanAttribute"</span> property=<span class="string">"id"</span> /&gt;</span><br><span class="line">&lt;/jsp:useBean&gt;</span><br></pre></td></tr></table></figure></p>
-<p>If all the request parameter names matches with the java bean properties, then we can simply set bean properties like below.<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:useBean id=<span class="string">"myBeanAttribute"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"com.journaldev.MyBean"</span> scope=<span class="string">"session"</span>&gt;</span><br><span class="line">&lt;jsp:setProperty name=<span class="string">"myBeanAttribute"</span> property=<span class="string">"*"</span> /&gt;</span><br><span class="line">&lt;/jsp:useBean&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="jsp-include"><a href="#jsp-include" class="headerlink" title="jsp:include"></a>jsp:include</h2><p>We can use <code>jsp:include</code> action to include another resource in the JSP page.<br><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:include page=<span class="string">"header.jsp"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
-<p><strong>Difference with JSP include directive</strong><br>In include directive, the content to other resource is added to the generated servlet code <strong>at the time of translation</strong> whereas with include action it happens <strong>at runtime</strong>.<br>We can pass Parameters to the included resource using <code>jsp:param</code><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:include page=<span class="string">"header.jsp"</span>&gt;</span><br><span class="line">   &lt;jsp:param name=<span class="string">"myParam"</span> value=<span class="string">"myParam value"</span> /&gt;</span><br><span class="line">&lt;/jsp:include&gt;</span><br></pre></td></tr></table></figure></p>
-<h2 id="jsp-forward"><a href="#jsp-forward" class="headerlink" title="jsp:forward"></a>jsp:forward</h2><p>We can use <code>jsp:forward</code> to forward the request to another resource to handle it.<br><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;jsp:forward page=<span class="string">"login.jsp"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
-<h1 id="JSTL-tags"><a href="#JSTL-tags" class="headerlink" title="JSTL tags"></a>JSTL tags</h1><ol>
-<li><p><strong>Core Tags</strong><br>Iteration, conditional logic catch exception, url, forward or redirecr response…</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ taglib uri=<span class="string">"http://java.sun.com/jsp/jstl/core"</span> prefix=<span class="string">"c"</span> %&gt;</span><br><span class="line"></span><br><span class="line">&lt;%@ taglib uri=<span class="string">"http://java.sun.com/jsp/jstl/fmt"</span> prefix=<span class="string">"fmt"</span> %&gt;</span><br></pre></td></tr></table></figure>
+<li><p>Set DISPLAY to the number of the server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export DISPALY:1</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>SQL Tags</strong><br>Interaction with relational databases.</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ taglib uri=<span class="string">"http://java.sun.com/jsp/jstl/sql"</span> prefix=<span class="string">"sql"</span> %&gt;</span><br></pre></td></tr></table></figure>
+<li><p>Run the application in background</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup &lt;command&gt; &amp;</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>XML Tags</strong><br>Work with XML documents like parsing XML, transforming XML data and XPath expressions evaluation.</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ taglib uri=<span class="string">"http://java.sun.com/jsp/jstl/xml"</span> prefix=<span class="string">"x"</span> %&gt;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>Functions Tags</strong><br>Perform common operation, most of them are for string manipulation such as concatenation, split etc.</p>
-<figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;%@ taglib uri=<span class="string">"http://java.sun.com/jsp/jstl/functions"</span> prefix=<span class="string">"fn"</span> %&gt;</span><br></pre></td></tr></table></figure>
+<li><p>Runing a viewer at local client. Connect to <code>HOST:dispaly</code></p>
 </li>
 </ol>
-<h1 id="Custom-Tag"><a href="#Custom-Tag" class="headerlink" title="Custom Tag"></a>Custom Tag</h1><ol>
-<li><p>Creating cumtom tags handler class</p>
-<ul>
-<li>Extend <code>javax.servlet.jsp.tagext.SimpleTagSupport</code></li>
-<li>Override <code>doTags()</code> method</li>
-<li>Provide setter methods for the attributes we need for the tag.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NumberFormatterTag</span> <span class="keyword">extends</span> <span class="title">SimpleTagSupport</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">private</span> String format;</span><br><span class="line">	<span class="keyword">private</span> String number;</span><br><span class="line">	</span><br><span class="line">	<span class="comment">//Setters</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setFormat</span><span class="params">(String format)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.format = format;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setNumber</span><span class="params">(String number)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">this</span>.number = number;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">doTag</span><span class="params">()</span> <span class="keyword">throws</span> JspException, IOException </span>&#123;</span><br><span class="line">	...</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol start="2">
-<li>Creating Custom Tag Library Descriptor(TLD) File inside <strong>WEB-INF</strong> directory.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;short-name&gt;mytags&lt;/short-name&gt;</span><br><span class="line">&lt;uri&gt;https://journaldev.com/jsp/tlds/mytags&lt;/uri&gt;</span><br><span class="line">&lt;tag&gt;</span><br><span class="line">	&lt;name&gt;formatNumber&lt;/name&gt;</span><br><span class="line">	&lt;tag-class&gt;com.journaldev.jsp.customtags.NumberFormatterTag&lt;/tag-class&gt;</span><br><span class="line">	&lt;body-content&gt;empty&lt;/body-content&gt;</span><br><span class="line">	&lt;attribute&gt;</span><br><span class="line">	&lt;name&gt;format&lt;/name&gt;</span><br><span class="line">	&lt;required&gt;true&lt;/required&gt;</span><br><span class="line">	&lt;/attribute&gt;</span><br><span class="line">	&lt;attribute&gt;</span><br><span class="line">	&lt;name&gt;number&lt;/name&gt;</span><br><span class="line">	&lt;required&gt;true&lt;/required&gt;</span><br><span class="line">	&lt;/attribute&gt;</span><br><span class="line">&lt;/tag&gt;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-</li>
-<li><p>Deployment Descriptor Configuration</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">jsp-config</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">taglib</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">taglib-uri</span>&gt;</span>https://journaldev.com/jsp/tlds/mytags<span class="tag">&lt;/<span class="name">taglib-uri</span>&gt;</span></span><br><span class="line">  	<span class="tag">&lt;<span class="name">taglib-location</span>&gt;</span>/WEB-INF/numberformatter.tld<span class="tag">&lt;/<span class="name">taglib-location</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">taglib</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">jsp-config</span></span></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p><strong>Refefence:</strong><a href="https://www.journaldev.com/2064/jsp-expression-language-el-example-tutorial" target="_blank" rel="noopener">JSP EL Tutorial</a></p>
+<p>Reference: <a href="https://www.hep.phy.cam.ac.uk/vnc_docs/start.html" target="_blank" rel="noopener">VNC</a></p>
 
       
     </div>
@@ -535,7 +451,9 @@
       
         <div class="post-tags">
           
-            <a href="/blog/tags/jsp/" rel="tag"># JSP</a>
+            <a href="/blog/tags/gui/" rel="tag"># GUI</a>
+          
+            <a href="/blog/tags/x11/" rel="tag"># X11</a>
           
         </div>
       
@@ -548,8 +466,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/blog/javaee-servlet-notes/" rel="next" title="JavaEE Servlet Notes">
-                <i class="fa fa-chevron-left"></i> JavaEE Servlet Notes
+              <a href="/blog/spring-persistence/" rel="next" title="Spring数据持久化">
+                <i class="fa fa-chevron-left"></i> Spring数据持久化
               </a>
             
           </div>
@@ -557,10 +475,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/blog/jvm-summary/" rel="prev" title="JVM知识点">
-                JVM知识点 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -619,17 +533,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -733,22 +638,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Life-cycle-of-JSP-Page"><span class="nav-number">1.</span> <span class="nav-text">Life cycle of JSP Page</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSP-Implicit-Object"><span class="nav-number">2.</span> <span class="nav-text">JSP Implicit Object</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSP-Directives"><span class="nav-number">3.</span> <span class="nav-text">JSP Directives</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Exception-Handling-in-JSP"><span class="nav-number">4.</span> <span class="nav-text">Exception Handling in JSP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Define-an-Error-Page"><span class="nav-number">4.1.</span> <span class="nav-text">Define an Error Page</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Configuration"><span class="nav-number">4.2.</span> <span class="nav-text">Configuration</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Expression-Language-EL"><span class="nav-number">5.</span> <span class="nav-text">Expression Language(EL)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#EL-Implicati-Objects"><span class="nav-number">5.1.</span> <span class="nav-text">EL Implicati Objects</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#EL-Operators"><span class="nav-number">5.2.</span> <span class="nav-text">EL Operators</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Action-Tags"><span class="nav-number">6.</span> <span class="nav-text">Action Tags</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-useBean"><span class="nav-number">6.1.</span> <span class="nav-text">jsp:useBean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-include"><span class="nav-number">6.2.</span> <span class="nav-text">jsp:include</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jsp-forward"><span class="nav-number">6.3.</span> <span class="nav-text">jsp:forward</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JSTL-tags"><span class="nav-number">7.</span> <span class="nav-text">JSTL tags</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Custom-Tag"><span class="nav-number">8.</span> <span class="nav-text">Custom Tag</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       

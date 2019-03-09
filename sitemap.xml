@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://zlin.me/blog/virtual-network-computing/</loc>
+    
+    <lastmod>2019-03-09T07:47:31.233Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://zlin.me/blog/aws-ec2-shadowsocks-vpn/</loc>
     
     <lastmod>2019-01-08T16:40:18.054Z</lastmod>

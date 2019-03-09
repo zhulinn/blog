@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>https://zlin.me/blog/blog/virtual-network-computing/</loc>
+    <lastmod>2019-03-09T07:47:31.233Z</lastmod>
+    <data>
+        <display>
+        <title>Virtual Network Computing (VNC)</title>
+        <pubTime>2019-03-09T07:28:39.000Z</pubTime>
+        
+        <tag>GUI</tag>
+         
+        <tag>X11</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="https://zlin.me/blog/blog/categories/linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://zlin.me/blog/blog/aws-ec2-shadowsocks-vpn/</loc>
     <lastmod>2019-01-08T16:40:18.054Z</lastmod>
     <data>
